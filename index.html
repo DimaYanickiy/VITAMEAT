@@ -41,28 +41,28 @@
                         <div class="card-line"></div>
                         <!--<video id="video" autobuffer preload loop src="./images/pes_1_v.mp4" muted="muted" type="video/mp4"></video>-->
                         <img src="./images/pes_1.png">
-                        <p class="ts-24 bold lh-30 color-white">Дізнайся більше про Vitameat</p>
+                        <a href="#why" class="navigation-item ts-24 bold lh-30 color-white">Дізнайся більше про Vitameat</a>
                     </div>
                     <div class="card right">
                         <div class="card-line"></div>
                         <!--<video id="video" autobuffer preload loop src="./images/pes_2_v.mp4" muted="muted" type="video/mp4"></video>-->
                         <img src="./images/pes_2.png">
-                        <p class="ts-24 bold lh-30 color-white">Оформити замовлення</p>
+                        <a href="#buy" class="navigation-item ts-24 bold lh-30 color-white">Оформити замовлення</a>
                     </div>
                     <div class="card left">
                         <div class="card-line"></div>
                        <!-- <video id="video" autobuffer preload loop src="./images/pes_3_v.mp4" muted="muted" type="video/mp4"></video>-->
                         <img src="./images/pes_3.png">
-                        <p class="ts-24 bold lh-30 color-white">Контакти</p>
+                        <a href="#contacts" class="navigation-item ts-24 bold lh-30 color-white">Контакти</a>
                     </div>
                     <div class="card right">
                         <div class="card-line"></div>
                         <img src="./images/pes_4.png">
-                        <p class="ts-24 bold lh-30 color-white">Зворотний зв’язок</p>
+                        <a href="#sendemail" class="navigation-item ts-24 bold lh-30 color-white">Зворотний зв’язок</a>
                     </div>
                 </div>
             </section>
-            <section class="why-vitameat">
+            <section class="why-vitameat" id="why">
                 <div class="why-header">
                     <p class="ts-50 bold">Чому саме Vitameat?</p>
                     <div class="lapa-line"></div>
@@ -140,7 +140,7 @@
                     <img src="./images/maybutnevashogoulublencya.png" class="maybutne_text">
                 </div>
             </section>
-            <section class="select-buy-taste">
+            <section class="select-buy-taste" id="buy">
                 <p class="ts-50 bold">Обирай - купуй - смакуй</p>
                 <div class="prices">
                     <div class="prices-card">
@@ -162,9 +162,9 @@
                     </div>
                 </div>
             </section>
-            <section class="contacts">
+            <section class="contacts" id="contacts">
                 <p class="ts-50 bold">Контакти</p>
-                <p class="ts-20 bold color-grey">Здійснюємо доставку лише в межах Київської області</p>
+                <p class="ts-18 bold color-grey">Здійснюємо доставку лише в межах Київської області</p>
                 <div class="contacts-container">
                     <div class="contacts-icons">
                         <a href="#"><img src="./images/insta.png"></a>
@@ -178,18 +178,43 @@
                     </div>
                 </div>
             </section>
-            <section class="your-opinion">
+            <section class="your-opinion" id="sendemail">
                 <p class="nam ts-50 bold color-white">Нам важлива ваша думка!</p>
                 <p class="zalishte ts-24 bold color-white">Залиште відгук, пропозиію чи запитання, щоб допомогти нам стати краще</p>
                 <form class="opinion">
                     <input type="text" placeholder="Введіть відгук або пропозицію" class="opinion-input">
-                    <input type="submit" class="opinion-btn">
+                    <input type="submit" value="Залишити відгук" class="opinion-btn">
                 </form>
+            </section>
+            <section class="main-form">
+                <div class="form-container">
+                    <form class="form">
+                        <p class="ts-32 bold color-blue">Замовлення</p>
+                        <div class="item">
+                            <select placeholder="Обрати продукт" class="in product">
+                                <option value="value1" selected>Мясо 1</option>   
+                                <option value="value2">Мясо 2</option> 
+                                <option value="value3">Мясо 3</option> 
+                                <option value="value4">Мясо 4</option> 
+                            </select>
+                            <input type="number" value="1" min="1" max="20" class="in count">
+                            <div class="removeItem">&#128473;</div>
+                        </div>
+                        <div class="add-btn">+</div>
+                        <input type="text" placeholder="Ім’я, Прізвище" class="in name">
+                        <input type="tel" placeholder="Номер телефону" class="in phoneNumber">
+                        <input type="text" placeholder="Адреса доставки" class="in address">
+                        <p class="ts-18 color-blue">Доставка здійслюється ЛИШЕ в межах Києва та Київської області</p>
+                        <input type="submit" value="Замовити" class="btn">
+                    </form>
+                </div>
             </section>
         </main>
         <footer>
-        
+            &#169;2021 VITAMEAT
         </footer>
+        <script src="scripts/jquery.js"></script>
+        <script src="scripts/pagescroll.js"></script>
         <script src="./scripts/script.js"></script>
     </body>
 </html>

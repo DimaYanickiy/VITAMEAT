@@ -57,6 +57,9 @@ main{
 .ts-20{
     font-size: 1.2vw;
 }
+.ts-18{
+    font-size: 1vw;
+}
 .blue-line{
     height: 15px;
     background-color: #134A4E;
@@ -92,7 +95,7 @@ main{
     font-family: arial;
     font-size: 4vw;
     padding-top: 6%;
-    margin-right: 10%;
+    margin-right: 6%;
 }
 .main-section>img{
     width: 12%;
@@ -164,7 +167,7 @@ main{
 .card>img{
     width: 30%;
 }
-.card>p{
+.card>a{
     text-align: center;
     width: 25%;
 }
@@ -498,30 +501,85 @@ main{
     border-radius: 50px;
     border-style: hidden;
     background: #134A4E;
-    font-size: 1.8vw;
+    font-size: 1.2vw;
     color: white;
     font-family: berlin;
     font-weight: bold;
 }
-
-
-
-
-
-
-
-@media screen and (max-width: 991px) {
-    
-
+footer{
+    width: 100%;
+    padding: 1% 0;
+    background-color: #C4C4C4;
+    color: #777979;
+    font-size: 1vw;
+    text-align: center; 
 }
-
-
-@media screen and (max-width: 767px) {
-    
-
+.main-form{
+    position: relative;
+    width: 100%;
+    height: 98vh;
+    background: rgba(0, 0, 0, 0.5);
 }
-
-@media screen and (max-width: 479px) {
-    
-
+.form-container{
+    background: #E5E5E5;
+    width: 50%;
+    position: absolute;
+    top: calc(98vh/10);
+    left: 25%;
+    border-radius: 2vw;
+}
+.form-container>form{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+}
+.in{
+    width: 50%;
+    margin: 2% auto; 
+    padding: 2% 3%;
+    border-radius: 2vw;
+    border-style: hidden;
+    outline: inherit;
+    font-size: 1.2vw;
+}
+.btn{
+    width: 40%;
+    margin: 3% auto; 
+    padding: 2%;
+    border-radius: 2vw;
+    border-style: hidden;
+    outline: inherit;
+    font-size: 1.8vw;
+    background: #134A4E;
+    color: white;
+}
+.item{
+    display: flex;
+}
+.item>input{
+    width: 10%;
+}
+.add-btn{
+    width: 3%;
+    margin: 0 9%; 
+    padding: 1%;
+    border-radius: 2vw;
+    border-style: hidden;
+    outline: inherit;
+    font-size: 1.2vw;
+    background: #134A4E;
+    color: white;
+}
+.removeItem{
+    box-sizing: border-box;
+    padding: 1.2%;
+    width: 5%;
+    margin: 4% 0;
+    height: 1.8vw;
+    border-radius: 2vw;
+    background: #134A4E;
+    color: white;
 }
