@@ -80,8 +80,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    row-gap: 20vh;
-    padding: 5vh 0; 
+    padding: 5% 0; 
     background-image: url(../images/sector_1_bg.png);
     background-repeat: no-repeat;
     background-position: top;
@@ -92,6 +91,7 @@ main{
     text-align: end;
     font-family: arial;
     font-size: 4vw;
+    padding-top: 6%;
     margin-right: 10%;
 }
 .main-section>img{
@@ -204,31 +204,27 @@ main{
     position: relative;
     width: 100%;
     height: 100%;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 30% 30% 30%;
+}
+.why-container>img{
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
 }
 .why-card{
-    height: 30%;
-    margin: 2% 0;
+    margin: 4% 0;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 .why-card>div{
-    width: 45%;
+    width: 70%;
     text-align: center;
 }
 .why-card>div>p{
-    margin-top: 3%;
-}
-.why-card>img{
-    width: 20%;
-    height: auto;
-}
-.card-l{
-    width: 70%;
-}
-.card-r{
-    margin-left: 30%;
-    width: 70%;
+    margin-top: 4%;
 }
 .section-ingridients{
     position: relative;
@@ -243,6 +239,7 @@ main{
 .eclipse-1{
     width: 48%;
     height: auto;
+    margin-bottom: 3%;
     z-index: -2;
 }
 .eclipse-2{
@@ -311,8 +308,8 @@ main{
 }
 .tr{
     position: absolute;
-    right: 3vw;
-    top: 3vh;
+    right: 5%;
+    top: 2%;
 }
 .future{
     position: relative;
@@ -363,12 +360,13 @@ main{
     position: relative;
     display: flex;
     justify-content: space-around;
+    column-gap: 12%;
 }
 .price_1{
     position: absolute;
     width: 26%;
     top: 55%;
-    left: 10%;
+    left: 6%;
 }
 .price_2{
     position: relative;
@@ -376,12 +374,12 @@ main{
 }
 .meat-box{
     width: 100%;
-    height: auto;
+    height: 100%;
     margin-left: 25%;
 }
 .meat-box-2{
-    width: 90%;
-    height: auto;
+    width: 100%;
+    height: 60%;
 }
 .btn-1{
     position: absolute;
@@ -446,6 +444,9 @@ main{
     justify-content: space-around;
     align-items: center;
 }
+.contacts-icons>a>img{
+    width: 5vw;
+}
 .contacts-text{
     display: flex;
     justify-content: space-around;
@@ -461,11 +462,12 @@ main{
     background: url(../images/op.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    height: 60vh;
+    margin-top: 2%;
+    height: auto;
     text-align: center;
 }
 .nam{
-    -webkit-text-stroke: 2.5px #134A4E; 
+    -webkit-text-stroke: 2px #134A4E; 
     padding: 3% 0;
 }
 .zalishte{
@@ -474,28 +476,29 @@ main{
 }
 .opinion{
     width: 40%;
-    margin: 3% auto;
+    margin: 0 auto;
+    padding: 5% 0;
     display: flex;
     flex-direction: column;
 }
 .opinion-input{
-    width: 98%;
-    height: 5vh;
-    font-size: 2.5vh;
+    width: 96%;
+    font-size: 2vw;
     background: rgba(255, 255, 255, 0.7);
     border-radius: 50px;
     border-style: hidden;
     outline: inherit;
-    padding-left: 2%; 
+    padding: 2% 2%;
 }
 .opinion-btn{
-    margin: 2% auto;
+    margin: 0 auto;
+    margin-top: 5%;
     width: 30%;
-    height: 6vh;
+    padding: 2% 2%;
     border-radius: 50px;
     border-style: hidden;
     background: #134A4E;
-    font-size: 2.5vh;
+    font-size: 1.8vw;
     color: white;
     font-family: berlin;
     font-weight: bold;
@@ -508,38 +511,17 @@ main{
 
 
 @media screen and (max-width: 991px) {
-    .main-section{
-        padding: 3vh 0;
-        row-gap: 15vh;
-    }
+    
 
 }
 
 
 @media screen and (max-width: 767px) {
-    .main-section{
-        padding: 2vh 0;
-        row-gap: 5vh;
-    }
-    .header-text{
-        margin-right: 5vw;
-    }
-    .main-section>img{
-        margin-right: 5vw;
-    }
+    
 
 }
 
 @media screen and (max-width: 479px) {
-    .main-section{
-        padding: 1vh 0;
-        row-gap: 5vh;
-    }
-    .header-text{
-        margin-right: 5vw;
-    }
-    .main-section>img{
-        margin-right: 5vw;
-    }
+    
 
 }
