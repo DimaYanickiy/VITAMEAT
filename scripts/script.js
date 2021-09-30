@@ -13,32 +13,71 @@ $(".card a").mPageScroll2id();
 
 
 /////////////////////////////FORM////////////////////////////////////
+let counter = 0;
+let list;
 let elem = 3;
-
 let addBtn = document.querySelector('.add-btn');
 let form = document.querySelector('.form');
-let removeBtn = document.querySelectorAll('.removeBtn');
-let list;
-let counter = 0;
+let removeBtn = document.querySelectorAll('.removeItem');
+let navHeight = document.querySelector('.nav-container').clientHeight;
 
 addBtn.addEventListener('click', () => {
-    list = document.querySelectorAll('.item');
-    let listItem = document.createElement('div');
-    listItem.classList.add('item');
-    listItem.innerHTML = '<select placeholder="Обрати продукт" class="in product"><option value="value1" selected>Мясо 1</option><option value="value2">Мясо 2</option><option value="value3">Мясо 3</option><option value="value4">Мясо 4</option></select><input type="number" value="1" min="1" max="20" class="in count"><div class="removeItem">&#128473;</div>';
-    
     if(counter < elem){
-        addBtn.before(listItem);
-        counter++;
         list = document.querySelectorAll('.item');
-        removeBtn = document.querySelectorAll('.removeItem');
+        counter++;
+        list[counter].classList.remove('disabled');
         removeBtn[counter].addEventListener('click', () => {
-            form.removeChild(list[counter]);
+        if(counter > 0){
+            list[counter].classList.add('disabled');
             counter--;
             if(counter < elem){
-                list[counter].after(addBtn);
+                addBtn.classList.remove('disabled');
             }
+        }
         });
-        if(counter >= elem) {form.removeChild(addBtn);} 
+        if(counter == elem) {
+            addBtn.classList.add('disabled');
+        }
     }
 });
+
+let formSection = document.querySelector('.main-form');
+let scrollHeight = window.pageYOffset || document.documentElement.scrollTop;
+
+$(window).resize(function(){
+    if(!formSection.classList.contains('disabled')){
+        navHeight = document.querySelector('.nav-container').clientHeight
+        scrollHeight = window.pageYOffset || document.documentElement.scrollTop;
+        formSection.style.top = (scrollHeight+navHeight) + 'px';
+    }
+});
+
+let btn1 = document.querySelector('.btn-1');
+let btn2 = document.querySelector('.btn-2');
+
+btn1.addEventListener('click', () => {
+    scrollHeight = window.pageYOffset || document.documentElement.scrollTop;
+    makeForm();
+});
+btn2.addEventListener('click', () => {
+    scrollHeight = window.pageYOffset || document.documentElement.scrollTop;
+    makeForm();
+});
+                      
+function makeForm(){
+    document.body.style.overflow = "hidden";
+    formSection.style.top = (scrollHeight+navHeight) + 'px';
+    formSection.classList.remove('disabled');
+    $(formSection).css({left:-100+"%"})
+             .animate({"left":"0px"}, "slow");
+}
+
+let closeBtn = document.querySelector('.close-form');
+closeBtn.addEventListener('click', ()=>{
+    document.body.style.overflow = "";
+    $(formSection).css({left:0+"px"})
+             .animate({"left":"-100%"}, "fast");
+    formSection.classList.remove('disabled');
+});
+
+
