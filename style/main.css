@@ -542,7 +542,7 @@ footer{
     margin: 2% auto; 
     padding: 2% 3%;
     border-radius: 2vw;
-    border-style: hidden;
+    border-style: none;
     outline: inherit;
     font-size: 1.2vw;
 }
@@ -591,4 +591,12 @@ footer{
 }
 .disabled{
     display: none;
+}
+.error{
+    border-style: solid;
+    border-color: red;
+    color: #134A4E;
+}
+label.error{
+    display: none !important;
 }
